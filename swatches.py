@@ -48,7 +48,7 @@ phone_swatches = """
 """
 
 reference_swatches = """
-0       00      00      00
+0       FF      FF      FF
 1       FF      00      00
 2       00      FF      00
 3       00      00      FF
