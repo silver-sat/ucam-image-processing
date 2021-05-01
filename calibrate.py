@@ -6,7 +6,7 @@ Created on Sat Apr 24 16:49:58 2021
 """
 
 import cv2
-from swatches import *
+from swatches import reference, uCAM, phone
 
 reffname = r"c:\Users\Nathan\Downloads\ColorTest_original.jpg"
 uCAMfname = r"c:\Users\Nathan\Downloads\ColorTest_uCAMIII.jpg"
@@ -17,6 +17,12 @@ refsw = reference
 
 srcfn = uCAMfname
 srcsw = uCAM
+
+# srcfn = phonefname
+# srcsw = phone
+
+# srcfn = reffname
+# srcsw = reference
 
 refimg = cv2.imread(reffn)
 photoimg = cv2.imread(srcfn)
@@ -43,11 +49,17 @@ myccmimg1 = ccm1.infer_image(srcfn)
 ccm2 = MLRCCMGamma(srcsw,refsw,gamma=2.5)
 myccmimg2 = ccm2.infer_image(srcfn)
 
+from skimage import exposure
+
+histphotoimg = exposure.match_histograms(photoimg, refimg, multichannel=True)
+
 showimage("reference",refimg)
 showimage("photo",photoimg)
-# showimage("corrected",correctedimg)
+showimage("corrected",correctedimg)
 showimage("myccm1",myccmimg1)
 showimage("myccm2",myccmimg2)
+showimage("histcorr",histphotoimg)
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
