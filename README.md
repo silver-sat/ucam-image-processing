@@ -12,7 +12,7 @@ Three approaches are implemented in myccm.py and run in calibrate.py
 0) default options for the color_correction module from: https://github.com/riskiest/color_calibration referenced here: https://docs.opencv.org/master/d1/dc1/tutorial_ccm_color_correction_model.html
 1) multiple-linear regression on the RGB values (3x3 color correction matrix) based on swatches (inspired and simplified from color_calibration module)
 2) multiple-linear regression on the RGB values (3x3 color correction matrix) using a gamma-based linearization with constant 2.2 based on swatches.  (inspired and simplified from color_calibration module)
-3) histogram matching of color channels (skimage.exposure.match_hist). 
+3) histogram matching of color channels (skimage.exposure.match_histograms), referenced here: https://www.pyimagesearch.com/2021/02/15/automatic-color-correction-with-opencv-and-python/
 
 Images are shown on the screen for comparison.
 
