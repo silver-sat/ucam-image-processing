@@ -17,3 +17,29 @@ Three approaches are implemented in myccm.py and run in calibrate.py
 Images are shown on the screen for comparison.
 
 None of these methods seem particularly effective at producing a "better" image. 
+
+## Reference Image
+
+<A href="ColorTest_original.jpg"><img src="ColorTest_original.jpg" width=700 align="center"></A>
+
+## uCAM III Image
+
+### Original
+
+<A href="ColorTest_uCAMIII.jpg "><img src="ColorTest_uCAMIII.jpg " width=700 align="center"></A>
+
+### Corrected using color_correction module
+
+<A href="ColorTest_uCAMIII.corrected.jpg "><img src="ColorTest_uCAMIII.corrected.jpg " width=700 align="center"></A>
+
+### Basic CCM, no gamma correction
+
+<A href="ColorTest_uCAMIII.myccm1.jpg "><img src="ColorTest_uCAMIII.myccm1.jpg " width=700 align="center"></A>
+
+### Basic CCM, with gamma correction
+
+<A href="ColorTest_uCAMIII.myccm2.jpg "><img src="ColorTest_uCAMIII.myccm2.jpg " width=700 align="center"></A>
+
+### Color histogram matching
+
+<A href="ColorTest_uCAMIII.histcorr.jpg "><img src="ColorTest_uCAMIII.histcorr.jpg " width=700 align="center"></A>
