@@ -8,9 +8,9 @@ Created on Sat Apr 24 16:49:58 2021
 import cv2
 from swatches import reference, uCAM, phone
 
-reffname = r"c:\Users\Nathan\Downloads\ColorTest_original.jpg"
-uCAMfname = r"c:\Users\Nathan\Downloads\ColorTest_uCAMIII.jpg"
-phonefname = r"c:\Users\Nathan\Downloads\ColorTest_Phone_compressed.jpg"
+reffname = "ColorTest_original.jpg"
+uCAMfname = "ColorTest_uCAMIII.jpg"
+phonefname = "ColorTest_Phone_compressed.jpg"
 
 reffn = reffname
 refsw = reference
@@ -53,12 +53,19 @@ from skimage import exposure
 
 histphotoimg = exposure.match_histograms(photoimg, refimg, multichannel=True)
 
+cv2.imwrite(srcfn.rsplit('.',1)[0]+".corrected.jpg",correctedimg)
+cv2.imwrite(srcfn.rsplit('.',1)[0]+".myccm1.jpg",myccmimg1)
+cv2.imwrite(srcfn.rsplit('.',1)[0]+".myccm2.jpg",myccmimg2)
+cv2.imwrite(srcfn.rsplit('.',1)[0]+".histcorr.jpg",histphotoimg)
+
 showimage("reference",refimg)
 showimage("photo",photoimg)
 showimage("corrected",correctedimg)
 showimage("myccm1",myccmimg1)
 showimage("myccm2",myccmimg2)
 showimage("histcorr",histphotoimg)
+
+cv2.imwrite(srcfn.rsplit('.',1)[0]+".corrected.jpg",correctedimg)
 
 
 cv2.waitKey(0)

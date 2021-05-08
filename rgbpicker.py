@@ -8,9 +8,9 @@ Created on Fri Apr 23 17:03:56 2021
 import cv2
 import numpy as np
 
-photofile = r"c:\Users\Nathan\Downloads\ColorTest_Phone_compressed.jpg"
-# photofile = r"c:\Users\Nathan\Downloads\ColorTest_uCAMIII.jpg"
-# photofile = r"c:\Users\Nathan\Downloads\ColorTest_original.jpg"
+photofile = "ColorTest_Phone_compressed.jpg"
+# photofile = "ColorTest_uCAMIII.jpg"
+# photofile = "ColorTest_original.jpg"
 
 #this function will be called whenever the mouse is right-clicked
 def mouse_callback(event, x, y, flags, params):
